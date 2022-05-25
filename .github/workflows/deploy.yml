@@ -26,7 +26,7 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        pytest
+        python manage.py teste
   deploy:
     runs-on: ubuntu-latest
     needs: build
