@@ -9,6 +9,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
       - name: Setup Python
@@ -17,9 +18,16 @@ jobs:
           python-version: 3.9
           architecture: x64
           cache: 'pip'
+      - name: Copiar Configurações .env
+        run: |
+          cp contrib/.env
       - name: Instalar dependências
         run: |
           pip install -r requirements.txt
+      - name: Rodar flake8
+        uses: py-actions/flake8@v1
+        with:
+          checkName: 'flake8_py3'
       - name: Rodar Testes Automáticos
         run: |
           pytest
