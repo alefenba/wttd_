@@ -27,7 +27,7 @@ jobs:
           cache: 'pip'
       - name: Copiar Configurações .env
         run: |
-          cp WTTD/.env
+          cp -r WTTD/.env
       - name: Instalar dependências
         run: |
           pip install -r requirements.txt
