@@ -1,10 +1,6 @@
 name: Deploy
 
-on:
-  push:
-    branches:
-      - main
-
+on: [push]
 jobs:
   build:
     env:
@@ -34,14 +30,10 @@ jobs:
           cp contrib/env-sample .env
       - name: Instalar dependências
         run: |
-          pip install -r requirements-dev.txt
-      - name: Rodar flake8
-        uses: py-actions/flake8@v1
-        with:
-          checkName: 'flake8_py3'
+          pip install -r requirements.txt
       - name: Rodar Testes Automáticos
         run: |
-          pytest
+          python manage.py test
   deploy:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
