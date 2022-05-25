@@ -30,4 +30,4 @@ jobs:
           pip install -r requirements.txt
       - name: Rodar Testes Automáticos
         run: |
-          python manage.py teste
+          python manage.py test
