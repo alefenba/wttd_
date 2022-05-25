@@ -25,9 +25,6 @@ jobs:
           python-version: 3.9
           architecture: x64
           cache: 'pip'
-      - name: Copiar Configurações .env
-        run: |
-          cp -r WTTD/.env
       - name: Instalar dependências
         run: |
           pip install -r requirements.txt
