@@ -167,7 +167,7 @@ section header h2 {
     padding: 0;
     display: block;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0) url("../img/logo.png") no-repeat scroll left bottom;
+    background: url('../img/logo.png') no-repeat scroll left bottom;
 }
 
 
@@ -213,7 +213,7 @@ section header h2 {
     width:100%;
     max-height: auto;
     height:600px;
-    background:url(../img/top-bg.jpg) bottom center no-repeat;
+    background:url('../img/top-bg.jpg') bottom center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -279,7 +279,7 @@ section header h2 {
 /* REGISTER */
 
 .register {
-    background: url(../img/register-bg.jpg) no-repeat center center;
+    background: url('../img/register-bg.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -304,7 +304,7 @@ section header h2 {
 
 #venue {
     position: relative;
-    background: url(../img/map.jpg) no-repeat center center;
+    background: url('../img/map.jpg') no-repeat center center;
     background-size: cover;
     padding-bottom: 70px;
 }
