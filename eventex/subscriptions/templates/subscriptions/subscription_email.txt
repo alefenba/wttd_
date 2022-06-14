@@ -1,6 +1,6 @@
 Olá!Tudo bem?
 
-Muito obrigada por se inscrever no Eventex.
+Muito obrigado por se inscrever no Eventex.
 
 Estes foram os dados que você nos forneceu
 em sua inscrição:
@@ -13,10 +13,10 @@ Email: {{email}}
 
 Telefone: {{phone}}
 
-Em até 48 horas úteis,anossa equipe entrará
+Em até 48 horas úteis,a nossa equipe entrará
 em contato com você para concluirmos a sua
 matrícula.
 
 Atenciosamente,
 --
-Morena
+Álefe
