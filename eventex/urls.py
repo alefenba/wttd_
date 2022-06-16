@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,url
+from django.urls import path
+from django.conf.urls import url 
 import eventex.core.views
 from eventex.subscriptions.views import subscribe
 from django.views.static import serve
