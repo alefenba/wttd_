@@ -145,6 +145,7 @@ WHITENOISE_MANIFEST_STRICT=False
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+DEFAULT_FROM_EMAIL = 'uchiha-itachi02@hotmail.com'
 
 #Email configuration
 EMAIL_BACKEND = config('EMAIL_BACKEND')
