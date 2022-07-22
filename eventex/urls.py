@@ -16,14 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,re_path
 import eventex.core.views
-from eventex.subscriptions.views import subscribe
+from eventex.subscriptions.views import subscribe,detail
 from django.views.static import serve
 from django.conf import settings
 
 urlpatterns = [
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     path('', eventex.core.views.home),
-    path('admin/', admin.site.urls),
+    path('inscricao/<int:pk>/', detail),
     path('inscricao/', subscribe),
+    path('admin/', admin.site.urls),
 
 ]
