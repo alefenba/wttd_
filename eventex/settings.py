@@ -83,8 +83,13 @@ WSGI_APPLICATION = 'eventex.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'eventex',
+        'USER': 'root',
+        'PASSWORD' : config('PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '3306',
+        
     }
 }
 
