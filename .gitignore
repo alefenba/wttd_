@@ -130,3 +130,8 @@ dmypy.json
 .pyre/
 staticfiles
 mediafiles
+
+#Postgresfiles
+.pgdata
+
+*.sql

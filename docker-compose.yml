@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  databasee:
+    container_name: curso_eventex
+    image: postgres
+    restart: always
+    volumes:
+     - ./.pgdata:/var/lib/postgres/database
+    environment:
+     - LC_ALL=C.UTF-8
+     - POSTGRES_PASSWORD=eventex
+     - POSTGRES_USER=eventex
+    ports:
+     - 5433:5432
+
