@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'eventex',
         'USER': 'root',
         'PASSWORD' : config('PASSWORD', default = ''),
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
         
     }
