@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from decouple import config,Csv
-import django
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'eventex',
         'USER': 'root',
-        'PASSWORD' : config('PASSWORD'),
+        'PASSWORD' : config('PASSWORD', default = ''),
         'HOST': 'localhost',
         'PORT': '3306',
         
