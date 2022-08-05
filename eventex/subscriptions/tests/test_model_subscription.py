@@ -4,7 +4,7 @@ from eventex.subscriptions.models import Subscription
 
 class SubscriptionModelTest(TestCase):
     def setUp(self):
-        self.obj = Subscription(name="Alefe Gomes", cpf="12345678901",email="uchiha-itachi02@hotmail.com",phone="12-992179305")
+        self.obj = Subscription(name="Alefe Gomes", cpf="12345678901",email="uchiha-itachi02@hotmail.com",phone="12-123456789")
         self.obj.save()
     
     def test_create(self):
