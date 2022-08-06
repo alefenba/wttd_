@@ -23,7 +23,7 @@ class SubscriptionsNewGet(TestCase):
 
     def test_html(self):
         """ html deve contar tags de input """
-        tags = (('<form', 1),('<input', 6),('type="text" ', 4),('type="submit" ', 1))
+        tags = (('<form', 1),('<input', 6),('type="text" ', 3),('type="submit" ', 1))
         
         for text, count in tags:
             with self.subTest():
