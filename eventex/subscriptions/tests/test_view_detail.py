@@ -7,7 +7,7 @@ from eventex.subscriptions.models import Subscription
 class SubscriptionDetailGet(TestCase):
     def setUp(self):
         self.obj = Subscription.objects.create(name = 'Alefe Gomes',cpf = '12345678901',email = 'uchiha-itachi02@hotmail.com',phone = '12-123456789')
-        self.resp = self.client.get(r('subscriptions:detail', self.obj.pk))
+        self.resp = self.client.get(r('subscriptions:detail', self.obj.hash_id))
 
 
     def test_get(self):
@@ -28,5 +28,5 @@ class SubscriptionDetailGet(TestCase):
 
 class SubscriptionDetailNotFound(TestCase):
     def test_not_found(self):
-        resp = self.client.get((r('subscriptions:detail', 0)))
+        resp = self.client.get((r('subscriptions:detail', '00000000-0000-0000-0000-000000000000')))
         self.assertEqual(404, resp.status_code)

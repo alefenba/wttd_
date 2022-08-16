@@ -28,14 +28,14 @@ def create(request):
         _send_mail('Confirmação de Inscrição',settings.DEFAULT_FROM_EMAIL,subscription.email,'subscriptions/subscription_email.txt',{'subscription': subscription})
         messages.success(request,'Inscrição realizada com Sucesso!')
 
-        return HttpResponseRedirect (r('subscriptions:detail',subscription.pk))
+        return HttpResponseRedirect (r('subscriptions:detail',str(subscription.hash_id)))
 
 
 
 
-def detail(request, pk):
+def detail(request, hash_id):
     try: 
-        subscription = Subscription.objects.get(pk=pk)
+        subscription = Subscription.objects.get(hash_id=hash_id)
     except: 
         Subscription.DoesNotExist
         raise Http404

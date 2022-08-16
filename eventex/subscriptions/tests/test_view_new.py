@@ -44,12 +44,12 @@ class SubscriptionsNewPost(TestCase):
     def setUp(self):
         data = dict(name='Alefe Gomes', cpf='12345678901', email='uchiha-itachi02@hotmail.com', phone='12-123456789')
         self.resp = self.client.post(r('subscriptions:new'), data)
+        self.hash_id=Subscription.objects.first().hash_id
     
     
-    @unittest.skip('skipped test') 
     def test_post(self):
-        """POST válido deve redirecionar /inscricao/1/"""
-        self.assertRedirects(self.resp, r('subscriptions:detail',1))
+        """POST válido deve redirecionar /inscricao/id/"""
+        self.assertRedirects(self.resp, r('subscriptions:detail',self.hash_id))
         
 
     def test_send_subscribe_emails(self):
